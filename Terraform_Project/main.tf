@@ -12,14 +12,6 @@ provider "aws" {
   secret_key = "${var.guest_secret_key}"
 }
 
-data "aws_caller_identity" "guest" {
-  provider = "aws.guest"
-
-}
-
-data "aws_caller_identity" "current" {}
-
-
 
 module "s3_cross_accout_module" {
   source = ".//S3_Cross_Account_Module"
