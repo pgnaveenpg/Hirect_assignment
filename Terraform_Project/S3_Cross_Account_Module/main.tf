@@ -1,7 +1,3 @@
-data "aws_caller_identity" "guest" {
-  provider = "aws.guest"
-
-}
 
 data "aws_caller_identity" "current" {}
 
