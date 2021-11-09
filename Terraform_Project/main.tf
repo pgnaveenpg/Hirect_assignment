@@ -13,7 +13,14 @@ provider "aws" {
 }
 
 
+
 module "s3_cross_accout_module" {
   source = ".//S3_Cross_Account_Module"
 }
+
+module "ECR_cross_account_module" {
+  source = ".//ECR_Cross_Account_Module"
+}
+
+
 
