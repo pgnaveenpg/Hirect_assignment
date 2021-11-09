@@ -85,8 +85,8 @@ data "aws_iam_policy_document" "lambda" {
     principals {
       identifiers = [
         "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root",
-        "arn:aws:iam::${data.aws_caller_identity.guest.account_id}:root",
-       # "${var.cross_account_users}"
+      # "arn:aws:iam::${data.aws_caller_identity.guest.account_id}:root",
+        "arn:aws:iam::${element(var.cross_account_ids,1)}:root"
       ]
       type = "AWS"
     }
